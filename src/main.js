@@ -162,21 +162,18 @@ directorButton.addEventListener('click', (event) => {
   const arrayDirectors = directors.split(',')
   const tituloDirector = document.getElementById('director-list');
   tituloDirector.innerHTML = "Director";
-<<<<<<< HEAD
   directors.forEach((director) => {
     //Crea el div
 
     dataBaseContainer.innerHTML += `
-    <li class="director-name" id="${director}<br>">${director}</li><br>
-=======
-  arrayDirectors.forEach(element => {
+    <li class="director-name" id="${director}<br>">${director}</li><br>`
+  /*arrayDirectors.forEach(element => {
     //Crea el div
 
     dataBaseContainer.innerHTML += `
     <li class="director-name" id="${element.director}<br>">${element.director}</li>
->>>>>>> a48fdecafe56059645ca70d076f5e352fc4bb3ff
   `;
-    //Se envía al div
+    //Se envía al div*/
     dataBaseContainer.appendChild(tituloDirector);
 
   });
