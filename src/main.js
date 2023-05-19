@@ -149,14 +149,14 @@ directorButton.addEventListener('click', (event) => {
 
   const tituloDirector = document.getElementById('director-list');
   tituloDirector.innerHTML = "Director";
-  directors.forEach(() => {
+  directors.forEach((director) => {
     //Crea el div
 
-    dataBaseContainer.innerHTML = `
-    <li class="director-name" id="${directors}<br>">${directors}</li>
+    dataBaseContainer.innerHTML += `
+    <li class="director-name" id="${director}<br>">${director}</li>
   `;
     //Se envía al div
-    dataBaseContainer.appendChild(tituloDirector);
+    //dataBaseContainer.appendChild(tituloDirector);
 
   });
 }
