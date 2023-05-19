@@ -29,7 +29,7 @@ export const filterLocalities = (films) => {
       localities.push({ name: localityObjects.name, img: localityObjects.img });
     }
   }
-console.log(localities);
+  console.log(localities);
   return localities;
 };
 
@@ -37,7 +37,7 @@ console.log(localities);
 export const filterDirector = (films) => {
   // Se declara array vacio
   const directors = [];
-//Se recorre el array films para ubicar cada film
+  //Se recorre el array films para ubicar cada film
   for (const film of films) {
     //Accedemos al valor de director entrando a la constante film.director
     const director = film.director;
@@ -47,7 +47,7 @@ export const filterDirector = (films) => {
       directors.push(director);
     }
   }
-//Devuelve el array con los nombres sin repetir
+  //Devuelve el array con los nombres sin repetir
   return directors;
 };
 
@@ -74,17 +74,22 @@ console.log(filterMovie, propertyValue);*/
   console.log(filtrarDirector)
 }*/
 
-
-
-export const filterMovie = (data, propertyValue) => {
-  const films = data.filter(movie => movie.title === propertyValue);
+//films[0].people[0].name
+//búsqueda de película por título
+export const searchByTitle = (data, propertyValue) => {
+  const films = data.filter(movie => movie.title.toLowerCase() === propertyValue.toLowerCase());
   return films;
 };
 
-//Devuelve la lista de personajes
-  
 
+//Mostrar personaje según búsqueda
+export const searchCharacterByName = (data, propertyValue) => {
+  const characterByName = data.filter(characterName => characterName.name.toLowerCase() === propertyValue.toLowerCase());
+  return characterByName;
+};
 
-//funcion para mostrar personaje según película
-
-//
+//Mostrar localidad al buscar por nombre en input
+export const searchLocationByName = (data, propertyValue) => {
+  const locationByName = data.filter(locationName => locationName.name.toLowerCase() === propertyValue.toLowerCase());
+  return locationByName; 
+}
