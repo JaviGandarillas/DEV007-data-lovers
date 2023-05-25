@@ -27,8 +27,8 @@ header, #logo-totoro{
     flex-direction: column;
     position: fixed;
     z-index: 3;
-
 }
+
 header {
     z-index: 3;
     background: #329EA1;
@@ -121,9 +121,7 @@ font-size: 32px;
 line-height: 48px;
 text-align: center;
 letter-spacing: 0.15em;
-
 color: #FFFFFF;
-
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .welcome-p{
@@ -135,9 +133,7 @@ font-size: 24px;
 line-height: 48px;
 text-align: center;
 letter-spacing: 0.15em;
-
 color: #FFFFFF;
-
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .search-by-word{
@@ -196,6 +192,17 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     justify-content: space-between;
     max-width: 150px;
 }
+
+.character-name {
+    text-align: center;
+    font-family: 'Kanit';
+    font-style: normal;
+    color: #0b2222;
+    display: flex;
+    justify-content: space-between;
+    max-width: 150px;
+}
+
 
 .character-name {
     text-align: center;
@@ -336,4 +343,9 @@ button :hover{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+.movie-poster-card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
 }

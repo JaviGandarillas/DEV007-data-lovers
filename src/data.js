@@ -1,20 +1,14 @@
 // estas funciones son de ejemplo
-
-export const ghibliData = () => {
-  return 'ghibliData';
-};
-
-
+//por qué no tenemos la de películs aquí?
 export const filterCharacter = (films) => {
   const characters = [];
 
   for (const film of Object.values(films)) {
     for (const character of film.people) {
-      characters.push({ name: character.name, img: character.img });
+      characters.push({ name: character.name, img: character.img, gender: character.gender, age: character.age, eye_color: character.eye_color, hair_color: character.hair_color, specie: character.specie});
       
     }
   }
-
   return characters;
 };
 
@@ -26,10 +20,10 @@ export const filterLocalities = (films) => {
     //recorre array locations almacena su llave-valor en localityObjects
     for (const localityObjects of filmObjects.locations) {
     //Se va sumando al array localities los datos que encuentra sefun lo solicitado (name + img)
-      localities.push({ name: localityObjects.name, img: localityObjects.img });
+      localities.push({ name: localityObjects.name, img: localityObjects.img, climate: localityObjects.climate, terrain: localityObjects.terrain, surface_water: localityObjects.surface_water });
     }
   }
-  console.log(localities);
+  //console.log(localities);
   return localities;
 };
 
@@ -50,6 +44,27 @@ export const filterDirector = (films) => {
   //Devuelve el array con los nombres sin repetir
   return directors;
 };
+
+
+//Ordenar alfabéticamente
+export function orderDataAZ (data, order) {
+  const orderedData = data.sort(function (a, b) {
+    const titleA = a.title.toUpperCase();
+    const titleB = b.title.toUpperCase();
+    if(titleA < titleB) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+  if (order === 'a-z') {
+    return orderedData
+  } else {
+    return orderedData.reverse();
+  }
+}
+
+
 
 /*export const filterDirector = (films) => {
  const directorNames = 
@@ -83,7 +98,7 @@ export const searchByTitle = (data, propertyValue) => {
 
 
 //Mostrar personaje según búsqueda
-export const searchCharacterByName = (data, propertyValue) => {
+/*export const searchCharacterByName = (data, propertyValue) => {
   const characterByName = data.filter(characterName => characterName.name.toLowerCase() === propertyValue.toLowerCase());
   return characterByName;
 };
@@ -92,4 +107,4 @@ export const searchCharacterByName = (data, propertyValue) => {
 export const searchLocationByName = (data, propertyValue) => {
   const locationByName = data.filter(locationName => locationName.name.toLowerCase() === propertyValue.toLowerCase());
   return locationByName; 
-}
+} */
