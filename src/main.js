@@ -15,7 +15,7 @@ console.log(directors);
 const localities = filterLocalities(films);
 const characters = filterCharacter(films);
 
-console.log(filterCharacter(films));
+console.log(filterCharacter(films)[0]);
 
 //console.log(films);
 

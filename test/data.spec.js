@@ -46,7 +46,7 @@ describe('filterCharacter', () => {
   });
 
   it("debería retornar un string", () => {
-    const result =
+    const films =
       [
         {
           "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -70,7 +70,7 @@ describe('filterCharacter', () => {
             },]
         }]
 
-    expect(filterCharacter(result.name)).toEqual("Pazu");
+    expect(filterCharacter(films)).toHaveProperty(films.people, )
   });
 
   it("debería retornar el gender", () => {
@@ -86,7 +86,7 @@ describe('filterCharacter', () => {
         "specie": "Human"
       }
     ];
-    expect(result.films[0].people[0].name).toBe('Male');
+    expect(result).toBe('Male');
   });
 });
 
