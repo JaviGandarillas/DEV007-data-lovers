@@ -7,23 +7,32 @@ nav {
     text-align: center;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: row wrap;
     margin-top: 60px;
+
 }
 
 .nav-buttons,
 .search-by-word {
     position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 body {
-    background-image: linear-gradient(to bottom left, #34b4dc, #cbd39a);
-    background-repeat: repeat;
+    background: linear-gradient(to bottom left, #34b4dc, #cbd39a);
     background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: center;
     margin: 0;
+    min-height: calc(100vh - 3rem);
 }
 
 main {
@@ -31,29 +40,13 @@ main {
     font-family: 'Kanit';
     font-style: normal;
     height: 90%;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-attachment: no-repeat;
     background-size: cover;
+    
 }
 
-/*
-header {
-    display: flex;
-    justify-content: center;
-    z-index: 3;
-    background: #236E70;
-    margin: 0%;
-    font-family: 'Londrina Solid';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 38px;
-text-align: center;
-letter-spacing: 0.2em;
-color:#E9E3E3;
-}*/
 
 header {
     background: #236E70;
@@ -68,6 +61,10 @@ header {
     width: 100%;
     margin-bottom: 50px;
     z-index: 2;
+}
+
+.sort-area {
+    display: flex;
 }
 
 .logo-ghiblipedia {
@@ -156,7 +153,7 @@ header {
     font-family: 'Londrina Solid';
     font-style: normal;
     font-weight: 400px;
-    font-size: larger;
+    font-size: 25px;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.1em;
@@ -173,9 +170,10 @@ header {
 .movie-poster,
 .local-img,
 .character-img {
-    width: 150px;
-    height: 190px;
+    width: 250px;
+    height: 350px;
     display: flex;
+    flex-flow: row wrap;
     margin: 45px;
     border-radius: 12px;
     cursor: pointer;
@@ -190,12 +188,16 @@ header {
     opacity: 120%;
     box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 3), 7px 7px 20px 0px rgba(0.5, 0.5, 0, 0.7), 4px 4px 5px 0px rgba(0.3, 0.3, 0.3, 0.6);
     zoom: inset 120%;
+}
 
+.img-div {
+    min-width: 150px;
+    min-height: 190px;
 }
 
 #database-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     width: 100%;
     max-width: 800px;
     min-width: 200px;
@@ -273,9 +275,9 @@ header {
 
 .filter-buttons {
     box-sizing: border-box;
-    width: 175.09px;
+    width: 200.09px;
     min-width: 80px;
-    height: 42.06px;
+    height: 50px;
     background: #e66b69e8;
     border-width: 0px 1.71654px 1.71654px 0px;
     border-style: solid;
@@ -285,7 +287,7 @@ header {
     font-family: 'Londrina Solid';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 30px;
     line-height: 30px;
     text-align: center;
     letter-spacing: 0.1em;
@@ -404,7 +406,7 @@ header {
 
 .movie-info {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     font-family: 'Londrina Solid';
     font-style: normal;
     font-weight: 400;
@@ -420,7 +422,7 @@ header {
 
 .movie-div3 {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     font-family: 'Londrina Solid';
     font-style: normal;
     font-weight: 400;
@@ -441,28 +443,13 @@ header {
     flex-direction: row;
 }
 
-/*.directors{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Londrina Solid';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    margin-left: 5%;
-    margin-right: 5%;
-    color: #4F4E48;
-    padding: 20px;
-    margin-top: -50px;
-}*/
 footer {
     background: #4F4E48;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    align-content:flex-end;
     height: 50px;
     box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0), 7px 7px 20px 0px rgba(0, 0, 0, .5), 4px 4px 5px 0px rgba(0, 0, 0, .1);
     border: rgba(0, 0, 0, 1);

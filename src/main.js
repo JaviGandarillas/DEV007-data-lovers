@@ -81,6 +81,7 @@ function moviesDisplay(movies) {
 
     //Se crea el div que contendrá el título de cada película y su respectiva portada
     const movieDiv = document.createElement('div');
+    movieDiv.classList.add("img-div");
 
     //Se usar innerHTML para crear la estructura html
     movieDiv.innerHTML +=
@@ -134,6 +135,7 @@ function moviesDisplay(movies) {
 
       //Se crea el div que contendrá el título de cada película y su respectiva portada
       const movieDiv = document.createElement('div');
+      movieDiv.classList.add("img-div");
 
       //Se usar innerHTML para crear la estructura html
       movieDiv.innerHTML +=
@@ -185,7 +187,9 @@ function characterDisplay(characters) {
   characters.forEach((character) => {
     // Crear un div para cada personaje
     const charDiv = document.createElement('div');
-    console.log(character);
+    charDiv.classList.add("img-div");
+
+    //console.log(character);
     // Inyectar el HTML para mostrar el nombre y la imagen del personaje
     charDiv.innerHTML = `
       <h4 class="character-name">${character.name}</h4>
@@ -235,6 +239,7 @@ function localitiesDisplay(localities) {
   localities.forEach((location) => {
     //Crea el div
     const localDiv = document.createElement('div');//establecer su lugar desde html para darle una clase de card
+    localDiv.classList.add("img-div");
     //Inyecta html name + img
     localDiv.innerHTML = `
             <h4 class="local-name">${location.name}</h4>
